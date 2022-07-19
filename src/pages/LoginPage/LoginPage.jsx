@@ -78,7 +78,7 @@ export const LoginPage = () => {
             <p>&copy; 2021 RIMAC Seguros y Reaseguros.</p>
           </div>
         </div>
-        <img src="./src/assets/img/login/person-m.svg" alt="person-mobile" />
+        <img src="src\assets\img\login\person-m.svg" alt="person-mobile" />
       </section>
 
       <main className="login__form">
