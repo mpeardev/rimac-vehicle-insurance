@@ -62,7 +62,7 @@ export const LoginPage = () => {
         <div>
           <div className="login__banner--deskimg">
             <img
-              src="./src/assets/img/login/person-d.svg"
+              src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225562/mirko/login/person-d_quglo6.svg"
               alt="person-desktop"
             />
           </div>
@@ -78,7 +78,10 @@ export const LoginPage = () => {
             <p>&copy; 2021 RIMAC Seguros y Reaseguros.</p>
           </div>
         </div>
-        <img src="src\assets\img\login\person-m.svg" alt="person-mobile" />
+        <img
+          src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225562/mirko/login/person-m_yqkrbw.svg"
+          alt="person-mobile"
+        />
       </section>
 
       <main className="login__form">
@@ -94,7 +97,7 @@ export const LoginPage = () => {
                   <div>
                     <p>DNI</p>
                     <img
-                      src="./src/assets/img/login/down-arrow.svg"
+                      src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225562/mirko/login/down-arrow_befjvm.svg"
                       alt="down-arrow"
                     />
                   </div>

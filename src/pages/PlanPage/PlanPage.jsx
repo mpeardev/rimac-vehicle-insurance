@@ -15,17 +15,22 @@ export const PlanPage = () => {
   const [value, setValue] = useState(number);
   const [result, setResult] = useState(amount);
 
+  const on =
+    "https://res.cloudinary.com/do4vup4zf/image/upload/v1658225568/mirko/plan/switch-on_cl8fn3.svg";
+  const off =
+    "https://res.cloudinary.com/do4vup4zf/image/upload/v1658225567/mirko/plan/switch-off_ixgkn7.svg";
+
   //    coberturas
   const [wheelCob, setWheelCob] = useState(false);
-  const [wheelSwitch, setWheelSwitch] = useState("off");
+  const [wheelSwitch, setWheelSwitch] = useState(off);
   const [wheelAddButton, setWheelAddButton] = useState("flex");
   const [wheelRemoveButton, setWheelRemoveButton] = useState("none");
   const [shockCob, setShockCob] = useState(false);
-  const [shockSwitch, setShockSwitch] = useState("off");
+  const [shockSwitch, setShockSwitch] = useState(off);
   const [shockAddButton, setShockAddButton] = useState("flex");
   const [shockRemoveButton, setShockRemoveButton] = useState("none");
   const [evitamientoCob, setEvitamientoCob] = useState(false);
-  const [evitamientoSwitch, setEvitamientoSwitch] = useState("off");
+  const [evitamientoSwitch, setEvitamientoSwitch] = useState(off);
   const [evitamientoAddButton, setEvitamientoAddButton] = useState("flex");
   const [evitamientoRemoveButton, setEvitamientoRemoveButton] =
     useState("none");
@@ -33,14 +38,14 @@ export const PlanPage = () => {
   const handleWheelCob = () => {
     if (wheelCob) {
       setResult(amount);
-      setWheelSwitch("off");
+      setWheelSwitch(off);
       setWheelAddButton("flex");
       setWheelRemoveButton("none");
       setWheelCob(false);
     }
     if (!wheelCob) {
       setResult(amount + 15);
-      setWheelSwitch("on");
+      setWheelSwitch(on);
       setWheelAddButton("none");
       setWheelRemoveButton("flex");
       setWheelCob(true);
@@ -50,14 +55,14 @@ export const PlanPage = () => {
     if (value <= 16000) {
       if (shockCob) {
         setResult(amount);
-        setShockSwitch("off");
+        setShockSwitch(off);
         setShockAddButton("flex");
         setShockRemoveButton("none");
         setShockCob(false);
       }
       if (!shockCob) {
         setResult(amount + 20);
-        setShockSwitch("on");
+        setShockSwitch(on);
         setShockAddButton("none");
         setShockRemoveButton("flex");
         setShockCob(true);
@@ -68,14 +73,14 @@ export const PlanPage = () => {
   const handleEvitamientoCob = () => {
     if (evitamientoCob) {
       setResult(amount);
-      setEvitamientoSwitch("off");
+      setEvitamientoSwitch(off);
       setEvitamientoAddButton("flex");
       setEvitamientoRemoveButton("none");
       setEvitamientoCob(false);
     }
     if (!evitamientoCob) {
       setResult(amount + 50);
-      setEvitamientoSwitch("on");
+      setEvitamientoSwitch(on);
       setEvitamientoAddButton("none");
       setEvitamientoRemoveButton("flex");
       setEvitamientoCob(true);
@@ -146,7 +151,7 @@ export const PlanPage = () => {
   useEffect(() => {
     if (value > 16000) {
       setResult(amount);
-      setShockSwitch("off");
+      setShockSwitch(off);
       setShockAddButton("flex");
       setShockRemoveButton("none");
       setShockCob(false);
@@ -160,7 +165,7 @@ export const PlanPage = () => {
         <section className="plan__nav">
           <div className="plan__nav--bar">
             <img
-              src="./src/assets/img/plan/left-arrow-m.svg"
+              src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225564/mirko/plan/left-arrow-m_zazigi.svg"
               alt="left-arrow-m"
             />
             <p>Paso 2 de 2</p>
@@ -169,14 +174,20 @@ export const PlanPage = () => {
 
           <div className="plan__nav--stepper">
             <div className="plan__nav--ud">
-              <img src="./src/assets/img/plan/one-icon.svg" alt="one-icon" />
+              <img
+                src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225566/mirko/plan/one-icon_xjlb2x.svg"
+                alt="one-icon"
+              />
               <p>Datos</p>
             </div>
 
             <div className="plan__nav--border"></div>
 
             <div className="plan__nav--ud">
-              <img src="./src/assets/img/plan/two-icon.svg" alt="two-icon" />
+              <img
+                src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225569/mirko/plan/two-icon_x0uzb8.svg"
+                alt="two-icon"
+              />
               <p>Arma tu plan</p>
             </div>
           </div>
@@ -203,12 +214,12 @@ export const PlanPage = () => {
                     </h3>
                     <img
                       className="plan__dates--card-imgM"
-                      src="./src/assets/img/plan/person-m.svg"
+                      src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225567/mirko/plan/person-m_mqdgjy.svg"
                       alt="person-mobile"
                     />
                     <img
                       className="plan__dates--card-imgD"
-                      src="./src/assets/img/plan/person-d.svg"
+                      src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225566/mirko/plan/person-d_n1lumy.svg"
                       alt="person-desktop"
                     />
                   </div>
@@ -227,14 +238,14 @@ export const PlanPage = () => {
                     <div className="input">
                       <span onClick={handleSubstract}>
                         <img
-                          src="./src/assets/img/plan/remove-b.svg"
+                          src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225567/mirko/plan/remove-b_i3wsen.svg"
                           alt="remove-b"
                         />
                       </span>
                       <p className="input__value">$ {numberImp(value)}</p>
                       <span onClick={handleAdd}>
                         <img
-                          src="./src/assets/img/plan/add-b.svg"
+                          src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225562/mirko/plan/add-b_fzpj3v.svg"
                           alt="add-b"
                         />
                       </span>
@@ -262,21 +273,21 @@ export const PlanPage = () => {
                     <div className="plan__toppings--option-bar">
                       <div className="plan__toppings--option-icon">
                         <img
-                          src="./src/assets/img/plan/llanta-icon.svg"
+                          src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225566/mirko/plan/llanta-icon_deidki.svg"
                           alt="llanta-icon"
                         />
                       </div>
                       <p>Llanta robada</p>
                       <div className="plan__toppings--option-switch">
                         <img
-                          src={`./src/assets/img/plan/switch-${wheelSwitch}.svg`}
-                          alt="switch-on"
+                          src={wheelSwitch}
+                          alt="switch"
                           onClick={handleWheelCob}
                         />
                       </div>
                       <div className="plan__toppings--option-arrow">
                         <img
-                          src="./src/assets/img/plan/top-arrow-d.svg"
+                          src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225568/mirko/plan/top-arrow-d_es8blc.svg"
                           alt="top-arrow-d"
                         />
                       </div>
@@ -285,14 +296,14 @@ export const PlanPage = () => {
                       <div onClick={handleWheelCob}>
                         <div style={{ display: `${wheelAddButton}` }}>
                           <img
-                            src="./src/assets/img/plan/more-icon.svg"
+                            src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225566/mirko/plan/more-icon_v5p3kz.svg"
                             alt="more-icon"
                           />
                           <p>Agregar</p>
                         </div>
                         <div style={{ display: `${wheelRemoveButton}` }}>
                           <img
-                            src="./src/assets/img/plan/less-icon.svg"
+                            src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225565/mirko/plan/less-icon_i6jkrn.svg"
                             alt="less-icon"
                           />
                           <p>Quitar</p>
@@ -314,7 +325,7 @@ export const PlanPage = () => {
                         Ver menos
                       </small>
                       <img
-                        src="./src/assets/img/plan/top-arrow-m.svg"
+                        src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225568/mirko/plan/top-arrow-m_pgho7p.svg"
                         alt="top-arrow-m"
                       />
                     </div>
@@ -323,21 +334,21 @@ export const PlanPage = () => {
                     <div className="plan__toppings--option-bar">
                       <div className="plan__toppings--option-icon">
                         <img
-                          src="./src/assets/img/plan/choque-icon.svg"
+                          src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225564/mirko/plan/choque-icon_martj3.svg"
                           alt="llanta-icon"
                         />
                       </div>
                       <p>Choque y/o pasarte la luz roja</p>
                       <div className="plan__toppings--option-switch">
                         <img
-                          src={`./src/assets/img/plan/switch-${shockSwitch}.svg`}
-                          alt={`switch-${shockSwitch}`}
+                          src={shockSwitch}
+                          alt="switch"
                           onClick={handleShockCob}
                         />
                       </div>
                       <div className="plan__toppings--option-arrow">
                         <img
-                          src="./src/assets/img/plan/bottom-arrow-d.svg"
+                          src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225564/mirko/plan/bottom-arrow-d_cg3q84.svg"
                           alt="bottom-arrow-d"
                         />
                       </div>
@@ -346,14 +357,14 @@ export const PlanPage = () => {
                       <div onClick={handleShockCob}>
                         <div style={{ display: `${shockAddButton}` }}>
                           <img
-                            src="./src/assets/img/plan/more-icon.svg"
+                            src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225566/mirko/plan/more-icon_v5p3kz.svg"
                             alt="more-icon"
                           />
                           <p>Agregar</p>
                         </div>
                         <div style={{ display: `${shockRemoveButton}` }}>
                           <img
-                            src="./src/assets/img/plan/less-icon.svg"
+                            src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225565/mirko/plan/less-icon_i6jkrn.svg"
                             alt="less-icon"
                           />
                           <p>Quitar</p>
@@ -365,7 +376,7 @@ export const PlanPage = () => {
                         Ver mas
                       </small>
                       <img
-                        src="./src/assets/img/plan/bottom-arrow-m.svg"
+                        src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225564/mirko/plan/bottom-arrow-m_jqi5lm.svg"
                         alt="bottom-arrow-m"
                       />
                     </div>
@@ -374,21 +385,21 @@ export const PlanPage = () => {
                     <div className="plan__toppings--option-bar">
                       <div className="plan__toppings--option-icon">
                         <img
-                          src="./src/assets/img/plan/atropello-icon.svg"
+                          src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225563/mirko/plan/atropello-icon_ntzzil.svg"
                           alt="llanta-icon"
                         />
                       </div>
                       <p>Atropello en la vía Evitamiento</p>
                       <div className="plan__toppings--option-switch">
                         <img
-                          src={`./src/assets/img/plan/switch-${evitamientoSwitch}.svg`}
-                          alt={`switch-${evitamientoSwitch}`}
+                          src={evitamientoSwitch}
+                          alt="switch"
                           onClick={handleEvitamientoCob}
                         />
                       </div>
                       <div className="plan__toppings--option-arrow">
                         <img
-                          src="./src/assets/img/plan/bottom-arrow-d.svg"
+                          src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225564/mirko/plan/bottom-arrow-d_cg3q84.svg"
                           alt="bottom-arrow-d"
                         />
                       </div>
@@ -397,14 +408,14 @@ export const PlanPage = () => {
                       <div onClick={handleEvitamientoCob}>
                         <div style={{ display: `${evitamientoAddButton}` }}>
                           <img
-                            src="./src/assets/img/plan/more-icon.svg"
+                            src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225566/mirko/plan/more-icon_v5p3kz.svg"
                             alt="more-icon"
                           />
                           <p>Agregar</p>
                         </div>
                         <div style={{ display: `${evitamientoRemoveButton}` }}>
                           <img
-                            src="./src/assets/img/plan/less-icon.svg"
+                            src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225565/mirko/plan/less-icon_i6jkrn.svg"
                             alt="less-icon"
                           />
                           <p>Quitar</p>
@@ -416,7 +427,7 @@ export const PlanPage = () => {
                         Ver mas
                       </small>
                       <img
-                        src="./src/assets/img/plan/bottom-arrow-m.svg"
+                        src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225564/mirko/plan/bottom-arrow-m_jqi5lm.svg"
                         alt="bottom-arrow-m"
                       />
                     </div>
@@ -438,21 +449,21 @@ export const PlanPage = () => {
                   <div className="plan__result--included-checks">
                     <div>
                       <img
-                        src="./src/assets/img/plan/check-icon.svg"
+                        src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225564/mirko/plan/check-icon_sgkde3.svg"
                         alt="check-icon"
                       />
                       <p>Llanta de respuesto</p>
                     </div>
                     <div>
                       <img
-                        src="./src/assets/img/plan/check-icon.svg"
+                        src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225564/mirko/plan/check-icon_sgkde3.svg"
                         alt="check-icon"
                       />
                       <p>Analisis de motor</p>
                     </div>
                     <div>
                       <img
-                        src="./src/assets/img/plan/check-icon.svg"
+                        src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225564/mirko/plan/check-icon_sgkde3.svg"
                         alt="check-icon"
                       />
                       <p>Aros gratis</p>

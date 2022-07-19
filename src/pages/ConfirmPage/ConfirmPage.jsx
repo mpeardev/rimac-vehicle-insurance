@@ -13,10 +13,16 @@ export const ConfirmPage = () => {
       <div>
         <section className="confirm__banner">
           <div className="confirm__banner--mobile">
-            <img src="./src/assets/img/confirm/banner-m.svg" alt="banner-m" />
+            <img
+              src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225560/mirko/confirm/banner-m_ngwpi2.svg"
+              alt="banner-m"
+            />
           </div>
           <div className="confirm__banner--desktop">
-            <img src="./src/assets/img/confirm/banner-d.svg" alt="banner-d" />
+            <img
+              src="https://res.cloudinary.com/do4vup4zf/image/upload/v1658225560/mirko/confirm/banner-d_xodl1n.svg"
+              alt="banner-d"
+            />
           </div>
         </section>
 
