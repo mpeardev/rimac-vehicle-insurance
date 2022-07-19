@@ -1,0 +1,94 @@
+{
+  "dates": [
+    {
+      "id": 1,
+      "name": "Roberto Camasca",
+      "username": "Roberto",
+      "dni": "69435217",
+      "email": "roberto.camasca@gmail.com",
+      "model": "Honda HR-V",
+      "age": "2021"
+    },
+    {
+      "id": 2,
+      "name": "Cristian Mori",
+      "username": "Cristian",
+      "dni": "12034668",
+      "email": "cristian1985@gmail.com",
+      "model": "Honda Jazz",
+      "age": "2018"
+    },
+    {
+      "id": 3,
+      "name": "Josselin Malpartida",
+      "username": "Josselin",
+      "dni": "69885223",
+      "email": "josselinm@gmail.com",
+      "model": "BMW M",
+      "age": "2019"
+    },
+    {
+      "id": 4,
+      "name": "Piero Iglesias",
+      "username": "Piero",
+      "dni": "687422310",
+      "email": "piero_21@outlook.com",
+      "model": "Mercedes-Benz Clase A",
+      "age": "2018"
+    },
+    {
+      "id": 5,
+      "name": "Romina Sisneros",
+      "username": "Romina",
+      "dni": "98457632",
+      "email": "romina_sisneros@gmail.com",
+      "model": "Kia Picanto",
+      "age": "2017"
+    },
+    {
+      "id": 6,
+      "name": "Julio Huapaya",
+      "username": "Julio",
+      "dni": "76588324",
+      "email": "julioh@live.com",
+      "model": "Suzuki Vitara",
+      "age": "2018"
+    },
+    {
+      "id": 7,
+      "name": "Roxana Jimenez",
+      "username": "Roxana",
+      "dni": "25866743",
+      "email": "roxanajimenez@gmail.com",
+      "model": "Toyota Yaris",
+      "age": "2020"
+    },
+    {
+      "id": 8,
+      "name": "Liliana Cornejo",
+      "username": "Liliana",
+      "dni": "63587742",
+      "email": "lcornejo@gmail.com",
+      "model": "Nissan Qashqai",
+      "age": "2021"
+    },
+    {
+      "id": 9,
+      "name": "Rodrigo Medrano",
+      "username": "Rodrigo",
+      "dni": "34877588",
+      "email": "rodrigo51691@outlook.com",
+      "model": "Nissan X-Trail",
+      "age": "2017"
+    },
+    {
+      "id": 10,
+      "name": "Carolina Razuri",
+      "username": "Carolina",
+      "dni": "45226879",
+      "email": "carolina.razuri@gmail.com",
+      "model": "Jeep Compass",
+      "age": "2017"
+    }
+  ]
+}

@@ -1,0 +1,601 @@
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/breakpoints" as breakpoints;
+@use "/src/styles/base/utilities" as utilities;
+
+.plan {
+  > div {
+    width: 100%;
+    height: 100%;
+    margin-top: 56px;
+    border-top: 1px solid colors.$rimac-gray05;
+    @include breakpoints.min-xxl-large {
+      @include utilities.flexbox-param(flex, auto, auto);
+      margin-top: 64px;
+    }
+  }
+  &__nav {
+    width: 100%;
+    min-width: 360px;
+    height: 48px;
+    @include utilities.flexbox-param(flex, center, auto);
+    @include breakpoints.min-xxl-large {
+      background: colors.$rimac-gray07;
+      width: 408px;
+      height: auto;
+      // margin-top: 64px;
+      align-items: flex-start;
+    }
+    &--bar {
+      padding: 0 32px;
+      width: 100%;
+      @include utilities.flexbox-param(flex, center, auto);
+      @include breakpoints.min-xxl-large {
+        display: none;
+      }
+      > img {
+        width: 24px;
+        height: 24px;
+        margin-right: 12px;
+      }
+      > p {
+        min-width: 68px;
+        color: colors.$rimac-gray-paragraph;
+        font-family: "Lato", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 16px;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        margin-right: 16px;
+      }
+      > div {
+        width: 100%;
+        height: 6px;
+        border-radius: 20px;
+        background: colors.$rimac-blueberry;
+      }
+    }
+    &--stepper {
+      display: none;
+      @include breakpoints.min-xxl-large {
+        display: block;
+        padding-left: 120px;
+        margin-top: 52px;
+      }
+    }
+    &--ud {
+      @include utilities.flexbox-param(flex, auto, auto);
+      > img {
+        width: 24px;
+        height: 24px;
+        margin-right: 16px;
+      }
+      > p {
+        width: 184px;
+        height: 24px;
+        color: colors.$rimac-gray03;
+        font-family: "Lato", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+      }
+    }
+    &--border {
+      width: 200px;
+      height: 40px;
+      border-left: 1px dashed colors.$rimac-gray05;
+      margin-left: 12px;
+    }
+  }
+  &__main {
+    width: 100%;
+    min-width: 360px;
+    @include breakpoints.min-xxl-large {
+      padding-bottom: 305px;
+    }
+    > div {
+      @include breakpoints.min-xxl-large {
+        width: 704px;
+        @include utilities.flexbox-param(flex, auto, auto);
+        margin: 0 auto;
+      }
+    }
+  }
+  &__dates {
+    width: 100%;
+    height: 340px;
+    background: colors.$rimac-gray07;
+    padding-top: 40px;
+    @include breakpoints.min-xxl-large {
+      padding-top: 48px;
+      background: transparent;
+    }
+    > div {
+      padding: 0 32px;
+      @include breakpoints.min-xxl-large {
+        padding: 0;
+      }
+      > h5 {
+        color: colors.$rimac-gray-paragraph;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        margin-top: 8px;
+      }
+    }
+    &--look {
+      > h1 {
+        color: colors.$rimac-gray-titles;
+        font-family: "Lato", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -0.6px;
+      }
+      @include breakpoints.min-xxl-large {
+        display: none;
+      }
+    }
+    &--hello {
+      display: none;
+      @include breakpoints.min-xxl-large {
+        display: block;
+        > h1 {
+          color: colors.$rimac-gray-titles;
+          font-family: "Lato", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 40px;
+          line-height: 48px;
+          letter-spacing: -0.6px;
+          > span {
+            color: colors.$rimac-red;
+          }
+        }
+      }
+    }
+    &--card {
+      position: relative;
+      width: 100%;
+      height: 148px;
+      background: colors.$white;
+      border-radius: 12px;
+      margin-top: 24px;
+      padding: 40px 0 0 24px;
+      @include breakpoints.min-xxl-large {
+        width: 384px;
+        height: 172px;
+        border: 3px solid colors.$rimac-gray06;
+      }
+      > p {
+        color: colors.$rimac-gray03;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+      }
+      > h3 {
+        width: 160px;
+        color: colors.$rimac-gray-titles;
+        font-family: "Lato", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.2px;
+        @include breakpoints.min-xxl-large {
+          width: 192px;
+          font-size: 20px;
+          line-height: 28px;
+        }
+      }
+      &-imgM {
+        position: absolute;
+        top: -8px;
+        right: 0;
+        width: 80px;
+        height: 156px;
+        @include breakpoints.min-xxl-large {
+          display: none;
+        }
+      }
+      &-imgD {
+        display: none;
+        @include breakpoints.min-xxl-large {
+          display: block;
+          position: absolute;
+          top: -13px;
+          right: 0;
+          width: 108px;
+          height: 179px;
+        }
+      }
+    }
+  }
+  &__indicator {
+    padding-top: 44px;
+    @include breakpoints.min-xxl-large {
+      padding-top: 55px;
+      width: 384px;
+    }
+    > div {
+      padding: 0 32px;
+      @include breakpoints.min-xxl-large {
+        padding: 0;
+        @include utilities.flexbox-param(flex, auto, space-between);
+      }
+      h3 {
+        color: colors.$rimac-gray-titles;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+      }
+      h4 {
+        color: colors.$rimac-gray-paragraph;
+        font-family: "Lato", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        margin-top: 4px;
+        > span {
+          color: colors.$rimac-gray05;
+        }
+      }
+    }
+    &-input {
+      margin-top: 16px;
+      @include breakpoints.min-xxl-large {
+        margin-top: 0;
+        width: 160px;
+      }
+    }
+  }
+  &__toppings {
+    margin-top: 36px;
+    @include breakpoints.min-xxl-large {
+      border-top: 1px solid colors.$rimac-gray05;
+      margin-top: 43px;
+      padding: 55px 0 0 0;
+      width: 384px;
+    }
+    &--subtitle {
+      padding: 0 32px;
+      h2 {
+        color: colors.$rimac-gray-titles;
+        font-family: "Lato", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+    &--tabs {
+      width: 100%;
+      height: 56px;
+      margin-top: 40px;
+      overflow: hidden;
+      @include utilities.flexbox-param(flex, auto, space-between);
+      border-bottom: 1px solid colors.$rimac-gray05;
+      > h5 {
+        color: colors.$rimac-gray-titles;
+        font-family: "Lato", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 16px;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        width: 100%;
+        min-width: 128px;
+        height: 55px;
+        text-align: center;
+        padding: 0 25px;
+      }
+      &-selected {
+        color: colors.$rimac-red !important;
+        border-bottom: 2px solid colors.$rimac-red;
+      }
+    }
+    &--info {
+      padding: 0 32px;
+      @include breakpoints.min-xxl-large {
+        padding: 0;
+      }
+    }
+    &--option {
+      width: 100%;
+      border-bottom: 1px solid colors.$rimac-gray05;
+      padding-top: 8px;
+      padding-bottom: 32px;
+      &-bar {
+        @include utilities.flexbox-param(flex, auto, space-between);
+        padding-top: 24px;
+        > p {
+          color: colors.$rimac-gray-titles;
+          font-family: "Lato", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0.2px;
+          text-align: start;
+          width: 100%;
+          padding-right: 30px;
+          @include breakpoints.min-xxl-large {
+            font-size: 20px;
+            line-height: 28px;
+            letter-spacing: 0;
+          }
+        }
+      }
+      &-icon {
+        > img {
+          width: 40px;
+          height: 40px;
+          margin-right: 16px;
+          @include breakpoints.min-xxl-large {
+            width: 48px;
+            height: 48px;
+            margin-right: 24px;
+          }
+        }
+      }
+      &-switch {
+        > img {
+          width: 51px;
+          height: 31px;
+          cursor: pointer;
+        }
+        @include breakpoints.min-xxl-large {
+          display: none;
+        }
+      }
+      &-arrow {
+        display: none;
+        @include breakpoints.min-xxl-large {
+          display: block;
+          margin-top: 3.67px;
+          > img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+      &-viewd {
+        display: none;
+        @include breakpoints.min-xxl-large {
+          display: block;
+          margin-top: 12px;
+          margin-left: 72px;
+          > div {
+            > div {
+              cursor: pointer;
+              @include utilities.flexbox-param(flex, auto, auto);
+              > img {
+                width: 24px;
+                height: 24px;
+                margin-right: 12px;
+              }
+              > p {
+                color: colors.$rimac-blueberry;
+                font-family: "Lato", sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 16px;
+                letter-spacing: 0.6px;
+                text-transform: uppercase;
+                margin-top: 4px;
+              }
+            }
+          }
+        }
+      }
+      &-text {
+        margin-top: 9px;
+        > p {
+          color: colors.$rimac-gray-paragraph;
+          font-family: "Roboto", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 24px;
+          margin-left: 56px;
+          @include breakpoints.min-xxl-large {
+            margin-left: 72px;
+          }
+        }
+        @include breakpoints.min-xxl-large {
+          margin-top: 16px;
+        }
+      }
+      &-viewm {
+        margin-top: 16px;
+        margin-left: 56px;
+        > small {
+          font-family: "Lato", sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 10px;
+          line-height: 16px;
+          letter-spacing: 0.8px;
+          text-transform: uppercase;
+          margin-right: 11px;
+        }
+        @include breakpoints.min-xxl-large {
+          display: none;
+        }
+      }
+      &-less {
+        color: colors.$rimac-gray03;
+      }
+      &-more {
+        color: colors.$rimac-blueberry;
+      }
+      > img {
+        width: 6px;
+        height: 10px;
+      }
+    }
+  }
+  &__result {
+    width: 100%;
+    height: 76px;
+    padding: 0 32px;
+    margin-top: 106px;
+    box-shadow: 0px 1px 4px rgba(163, 171, 204, 0.06),
+      0px 8px 30px rgba(20, 43, 127, 0.1);
+    @include breakpoints.min-xxl-large {
+      padding: 0;
+      margin-left: 96px;
+      height: auto;
+      box-shadow: none;
+    }
+    > div {
+      @include utilities.flexbox-param(flex, center, space-between);
+      height: 100%;
+      @include breakpoints.min-xxl-large {
+        display: block;
+      }
+    }
+    &--amount {
+      > p {
+        display: none;
+        @include breakpoints.min-xxl-large {
+          display: block;
+          color: colors.$rimac-gray-titles;
+          font-family: "Lato", sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: 0.6px;
+          text-transform: uppercase;
+        }
+      }
+      > h4 {
+        color: colors.$rimac-gray-titles;
+        font-family: "Lato", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.2px;
+        @include breakpoints.min-xxl-large {
+          font-size: 28px;
+          line-height: 36px;
+          margin-top: 10px;
+        }
+      }
+      > h5 {
+        font-family: "Lato", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 16px;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        @include breakpoints.min-xxl-large {
+          display: none;
+        }
+      }
+      > h6 {
+        display: none;
+        @include breakpoints.min-xxl-large {
+          display: block;
+          color: colors.$rimac-gray-paragraph;
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 20px;
+          letter-spacing: 0.2px;
+          margin-top: 4px;
+        }
+      }
+    }
+    &--included {
+      display: none;
+      @include breakpoints.min-xxl-large {
+        display: block;
+        margin-top: 19px;
+        border-top: 1px solid colors.$rimac-gray05;
+        padding-top: 24px;
+      }
+      > h5 {
+        color: colors.$rimac-gray-titles;
+        font-family: "Lato", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+      }
+      &-checks {
+        width: 100%;
+        height: 88px;
+        @include utilities.flexbox-param(flex, auto, space-between);
+        flex-direction: column;
+        margin-top: 12px;
+        > div {
+          @include utilities.flexbox-param(flex, auto, auto);
+          width: 100%;
+          height: 24px;
+          @include utilities.flexbox-param(flex, center, auto);
+          img {
+            width: 16px;
+            height: 16px;
+            margin-right: 16px;
+          }
+        }
+      }
+    }
+    &--button {
+      width: 168px;
+      height: 44px;
+      @include breakpoints.min-xxl-large {
+        margin-top: 32px;
+        width: 100%;
+        height: 48px;
+      }
+      button {
+        background: colors.$rimac-red;
+        width: 100%;
+        height: 100%;
+        outline: none;
+        border: 0;
+        border-radius: 6px;
+        color: #fff;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        cursor: pointer;
+        @include utilities.flexbox-param(flex, center, center);
+        @include breakpoints.min-xxl-large {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

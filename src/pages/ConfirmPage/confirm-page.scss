@@ -1,0 +1,152 @@
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/breakpoints" as breakpoints;
+@use "/src/styles/base/utilities" as utilities;
+
+.confirm {
+  > div {
+    width: 100%;
+    height: 100%;
+    margin-top: 56px;
+    border-top: 1px solid colors.$rimac-gray05;
+    @include breakpoints.min-xxl-large {
+      @include utilities.flexbox-param(flex, auto, auto);
+      margin-top: 64px;
+      height: calc(100vh - 64px);
+    }
+  }
+  &__banner {
+    width: 100%;
+    min-width: 360px;
+    @include breakpoints.min-xxl-large {
+      width: 408px;
+      height: auto;
+      background: colors.$rimac-gray07;
+    }
+    &--mobile {
+      @include breakpoints.min-xxl-large {
+        display: none;
+      }
+      > img {
+        width: 100%;
+      }
+    }
+    &--desktop {
+      display: none;
+      @include breakpoints.min-xxl-large {
+        display: block;
+        > img {
+          width: 416px;
+          height: 448px;
+          margin: 96px 0 0 88px;
+        }
+      }
+    }
+  }
+  &__main {
+    width: 100%;
+    min-width: 360px;
+    padding: 48px 32px 0 32px;
+    @include breakpoints.min-xxl-large {
+      width: calc(100% - 408px);
+      padding: 96px 0 0 224px;
+      > div {
+        width: 480px;
+      }
+    }
+    &--title {
+      > h1 {
+        color: colors.$rimac-gray-titles;
+        font-family: "Lato", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -0.6px;
+        @include breakpoints.min-xxl-large {
+          font-size: 36px;
+          line-height: 48px;
+          letter-spacing: 0.2px;
+        }
+      }
+      &-resalt {
+        color: colors.$rimac-red !important;
+      }
+    }
+    &--text {
+      margin-top: 24px;
+      > p {
+        color: colors.$rimac-gray-paragraph;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 28px;
+      }
+      &-email {
+        color: colors.$rimac-gray-titles !important;
+      }
+      &-values {
+        margin-top: 10px;
+        > p {
+          margin: 0;
+          color: colors.$rimac-gray-titles !important;
+          font-family: "Roboto", sans-serif;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 28px;
+        }
+      }
+    }
+    &--button {
+      width: 100%;
+      height: 56px;
+      margin-top: 60px;
+      @include breakpoints.min-xxl-large {
+        width: 255px;
+      }
+      button {
+        background: colors.$rimac-red;
+        width: 100%;
+        height: 100%;
+        outline: none;
+        border: 0;
+        border-radius: 8px;
+        color: #fff;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        @include utilities.flexbox-param(flex, center, center);
+        @include breakpoints.min-xxl-large {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  &__copyright {
+    width: 100%;
+    min-width: 360px;
+    height: 74px;
+    border-top: 1px solid colors.$rimac-gray05;
+    margin-top: 56px;
+    @include utilities.flexbox-param(flex, center, auto);
+    padding: 0 32px;
+    @include breakpoints.min-xxl-large {
+      display: none;
+    }
+    > small {
+      color: colors.$rimac-gray03;
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0.2px;
+    }
+  }
+}
