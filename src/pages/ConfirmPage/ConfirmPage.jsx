@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Header } from "../../components/molecules/Header/Header";
+import { Header } from "../../components/Header/Header";
 import firstImage from "../../assets/img/end/personHappy.svg";
 import "./confirm-page.scss";
 import { UserContext } from "../../context/UserContext";

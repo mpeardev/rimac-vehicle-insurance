@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { Header } from "../../components/molecules/Header/Header";
+import { Header } from "../../components/Header/Header";
 import { UserContext } from "../../context/UserContext";
 import "./login-page.scss";
 import { useNavigate } from "react-router-dom";

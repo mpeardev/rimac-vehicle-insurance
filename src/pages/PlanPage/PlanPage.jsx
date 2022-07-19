@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Header } from "../../components/molecules/Header/Header";
+import { Header } from "../../components/Header/Header";
 import { UserContext } from "../../context/UserContext";
 import "./plan-page.scss";
 
