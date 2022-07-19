@@ -130,8 +130,8 @@ export const PlanPage = () => {
         method: "PUT",
         body: JSON.stringify({
           ...userRegistre,
-          monthly: number,
-          amount: amount,
+          monthly: value,
+          amount: result,
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
